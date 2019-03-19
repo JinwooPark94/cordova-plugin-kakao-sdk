@@ -1722,7 +1722,7 @@ public class KakaoCordovaSDK extends CordovaPlugin {
                     convertView = inflater.inflate(KakaoResources.layout_login_item, parent, false);
                 }
 
-                ImageView imageView = convertView.findViewById(KakaoResources.login_method_icon);
+                ImageView imageView = (ImageView) convertView.findViewById(KakaoResources.login_method_icon);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     imageView.setImageDrawable(cordova.getActivity().getResources()
                             .getDrawable(authItems[position].icon, getContext().getTheme()));
@@ -1730,7 +1730,7 @@ public class KakaoCordovaSDK extends CordovaPlugin {
                     imageView.setImageDrawable(
                             cordova.getActivity().getResources().getDrawable(authItems[position].icon));
                 }
-                TextView textView = convertView.findViewById(KakaoResources.login_method_text);
+                TextView textView = (TextView) convertView.findViewById(KakaoResources.login_method_text);
                 textView.setText(authItems[position].textId);
                 return convertView;
             }
@@ -1753,7 +1753,7 @@ public class KakaoCordovaSDK extends CordovaPlugin {
             dialog.getWindow().setGravity(Gravity.CENTER);
         }
 
-        ListView listView = dialog.findViewById(KakaoResources.login_list_view);
+        ListView listView = (ListView) dialog.findViewById(KakaoResources.login_list_view);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -1766,7 +1766,7 @@ public class KakaoCordovaSDK extends CordovaPlugin {
             }
         });
 
-        Button closeButton = dialog.findViewById(KakaoResources.login_close_button);
+        Button closeButton = (Button) dialog.findViewById(KakaoResources.login_close_button);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
