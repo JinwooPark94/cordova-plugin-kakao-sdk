@@ -1,53 +1,14 @@
 # ionic 버그 수정
-ionic에서 plugin 설치 시 오류 현상 해결
+ionic 에서 plugin 설치 시 낮은 버전 호환성 문제 해결
 
 # cordova-plugin-kakao-sdk
 Kakao Cordova SDK Plugin (카카오 코르도바 SDK 플러그인)
 
-Version is updated to 3.0.0 
-  - cordova-android compatibility between 6.4.0 and ^7.0.0 fixed
-  - android SDK version changed from 1.12.0 to 1.16.0 (Google Play warning: Your app contains a Cross-App Scripting Vulnerability issue fixed)
-  - ios SDK version changed from 1.9.0 to 1.11.1
-  - new functions added  updateScopes(targetScopes: any), checkScopeStatus(targetScopes: any), requestSendMemo(builder: any), addPlusFriend(params: any), chatPlusFriend(params: any), chatPlusFriendUrl(params: any)
-
-*Kakao Official Documents
-
-**Android:  
-  - Login: https://developers.kakao.com/docs/android/user-management
-  - Link: https://developers.kakao.com/docs/android/kakaotalk-link
-  - Talk: https://developers.kakao.com/docs/android/kakaotalk-api
-  - PlusFriend: https://developers.kakao.com/docs/android/plusfriend
-  
-**iOS:  
-  - Login: https://developers.kakao.com/docs/ios/user-management
-  - Link: https://developers.kakao.com/docs/ios/kakaotalk-link
-  - Talk: https://developers.kakao.com/docs/ios/kakaotalk-api
-  - PlusFriend: https://developers.kakao.com/docs/ios/plusfriend
-
-
-## Development Environment and ETC
-|type|version
-|---|---
-|ionic (Ionic CLI)|3.19.1
-|cordova (Cordova CLI)|8.0.0
-|Cordova Platforms Android|7.1.4
-|Cordova Platforms IOS|4.5.4
-|Ionic Framework|ionic-angular 3.9.2
-|KakaoCommon.framework(ios)|1.11.1
-|KakaoLink.framework(ios)|1.11.1
-|KakaoMessageTemplate.framework(ios)|1.11.1
-|KakaoOpenSDK.framework(ios)|1.11.1
-|KakaoPlusFriend.framework(ios)|1.11.1
-|KakaoS2.framework(ios)|1.11.1
-|com.kakao.sdk:kakaotalk(android)|1.16.0
-|com.kakao.sdk:kakaolink(android)|1.16.0
-|com.kakao.sdk:plusfriend(android)|1.16.0
-
-## How to install
-install cordova plugin
+## 설치하기
+플러그인 설치
 ```
 // KAKAO_APP_KEY: the app key that you got assigned as a native key in the kakao development console
-$ cordova plugin add cordova-plugin-kakao-sdk --variable KAKAO_APP_KEY=YOUR_KAKAO_APP_KEY
+$ cordova plugin add https://github.com/JinwooPark94/cordova-plugin-kakao-sdk.git --variable KAKAO_APP_KEY=YOUR_KAKAO_APP_KEY
 ```
 
 install wrapper for kakao cordova sdk plugin to interface
