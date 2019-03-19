@@ -1,3 +1,6 @@
+# ionic 버그 수정
+ionic에서 plugin 설치 시 오류 현상 해결
+
 # cordova-plugin-kakao-sdk
 Kakao Cordova SDK Plugin (카카오 코르도바 SDK 플러그인)
 
